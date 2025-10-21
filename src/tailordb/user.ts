@@ -1,8 +1,9 @@
 import { db } from "@tailor-platform/tailor-sdk";
 
 export const user = db.type("User", {
-  identifier: db.string().validate(({ value }) => value.length > 0),
-  displayName: db.string().validate(({ value }) => value.length > 0),
+  name: db.string(),
+  email: db.string().unique(),
+  roles: db.string({ array: true }),
   createdAt: db.datetime().hooks({
     create: () => `(new Date()).toISOString()`,
   }),
