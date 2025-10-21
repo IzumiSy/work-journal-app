@@ -12,8 +12,8 @@ importers:
         specifier: 9.38.0
         version: 9.38.0
       '@tailor-platform/tailor-sdk':
-        specifier: 0.0.86
-        version: 0.0.86(typescript@5.9.3)
+        specifier: 0.0.87
+        version: 0.0.87(typescript@5.9.3)
       '@types/node':
         specifier: 22.18.10
         version: 22.18.10
@@ -60,8 +60,8 @@ packages:
     resolution: {integrity: sha512-bkFqkLhh3pMBUQQkpVgWDWq/lqzc2678eUyDlTBhRqhCHFguYYGM0Efga7tYk4TogG/3x0EEl66/OQ+WGbWB/Q==}
     engines: {node: '>=6.9.0'}
 
-  '@bufbuild/protobuf@2.9.0':
-    resolution: {integrity: sha512-rnJenoStJ8nvmt9Gzye8nkYd6V22xUAnu4086ER7h1zJ508vStko4pMvDeQ446ilDTFpV5wnoc5YS7XvMwwMqA==}
+  '@bufbuild/protobuf@2.10.0':
+    resolution: {integrity: sha512-fdRs9PSrBF7QUntpZpq6BTw58fhgGJojgg39m9oFOJGZT+nip9b0so5cYY1oWl5pvemDLr0cPPsH46vwThEbpQ==}
 
   '@connectrpc/connect-node@2.1.0':
     resolution: {integrity: sha512-6akCXZSX5uWHLR654ne9Tnq7AnPUkLS65NvgsI5885xBkcuVy2APBd8sA4sLqaplUt84cVEr6LhjEFNx6W1KtQ==}
@@ -494,8 +494,8 @@ packages:
   '@rolldown/pluginutils@1.0.0-beta.44':
     resolution: {integrity: sha512-g6eW7Zwnr2c5RADIoqziHoVs6b3W5QTQ4+qbpfjbkMJ9x+8Og211VW/oot2dj9dVwaK/UyC6Yo+02gV+wWQVNg==}
 
-  '@tailor-platform/tailor-sdk@0.0.86':
-    resolution: {integrity: sha512-d/NeORQqAa1BrrPYZd7UynOXRg6svftLjD07j1NS33UBCe8c6ECMEAodY9xFDpnMIYiVTA4HpjJC+FNqjEcWWA==}
+  '@tailor-platform/tailor-sdk@0.0.87':
+    resolution: {integrity: sha512-y1I+F4NN2LEPtO+UI859+BRM3KgmQmYEklPcpHgbqXI7YAOxw2RTo8b9nh08A9o/MNRQ26/AxrvRRoHO2bDzCg==}
     hasBin: true
 
   '@ts-graphviz/adapter@2.0.6':
@@ -1275,8 +1275,8 @@ packages:
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
 
-  resolve@1.22.10:
-    resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
+  resolve@1.22.11:
+    resolution: {integrity: sha512-RfqAvLnMl313r7c9oclB1HhUEAezcpLjz95wFH4LVuhk9JF/r22qmVP9AMmOU4vMX7Q8pN8jwNg/CSpdFnMjTQ==}
     engines: {node: '>= 0.4'}
     hasBin: true
 
@@ -1488,16 +1488,16 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@bufbuild/protobuf@2.9.0': {}
+  '@bufbuild/protobuf@2.10.0': {}
 
-  '@connectrpc/connect-node@2.1.0(@bufbuild/protobuf@2.9.0)(@connectrpc/connect@2.1.0(@bufbuild/protobuf@2.9.0))':
+  '@connectrpc/connect-node@2.1.0(@bufbuild/protobuf@2.10.0)(@connectrpc/connect@2.1.0(@bufbuild/protobuf@2.10.0))':
     dependencies:
-      '@bufbuild/protobuf': 2.9.0
-      '@connectrpc/connect': 2.1.0(@bufbuild/protobuf@2.9.0)
+      '@bufbuild/protobuf': 2.10.0
+      '@connectrpc/connect': 2.1.0(@bufbuild/protobuf@2.10.0)
 
-  '@connectrpc/connect@2.1.0(@bufbuild/protobuf@2.9.0)':
+  '@connectrpc/connect@2.1.0(@bufbuild/protobuf@2.10.0)':
     dependencies:
-      '@bufbuild/protobuf': 2.9.0
+      '@bufbuild/protobuf': 2.10.0
 
   '@dependents/detective-less@5.0.1':
     dependencies:
@@ -1772,11 +1772,11 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.0-beta.44': {}
 
-  '@tailor-platform/tailor-sdk@0.0.86(typescript@5.9.3)':
+  '@tailor-platform/tailor-sdk@0.0.87(typescript@5.9.3)':
     dependencies:
-      '@bufbuild/protobuf': 2.9.0
-      '@connectrpc/connect': 2.1.0(@bufbuild/protobuf@2.9.0)
-      '@connectrpc/connect-node': 2.1.0(@bufbuild/protobuf@2.9.0)(@connectrpc/connect@2.1.0(@bufbuild/protobuf@2.9.0))
+      '@bufbuild/protobuf': 2.10.0
+      '@connectrpc/connect': 2.1.0(@bufbuild/protobuf@2.10.0)
+      '@connectrpc/connect-node': 2.1.0(@bufbuild/protobuf@2.10.0)(@connectrpc/connect@2.1.0(@bufbuild/protobuf@2.10.0))
       '@urql/core': 5.2.0
       chokidar: 4.0.3
       citty: 0.1.6
@@ -2289,7 +2289,7 @@ snapshots:
       enhanced-resolve: 5.18.3
       module-definition: 6.0.1
       module-lookup-amd: 9.0.5
-      resolve: 1.22.10
+      resolve: 1.22.11
       resolve-dependency-path: 4.0.1
       sass-lookup: 6.1.0
       stylus-lookup: 6.1.0
@@ -2651,7 +2651,7 @@ snapshots:
 
   resolve-pkg-maps@1.0.0: {}
 
-  resolve@1.22.10:
+  resolve@1.22.11:
     dependencies:
       is-core-module: 2.16.1
       path-parse: 1.0.7
