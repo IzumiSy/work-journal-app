@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v3
+        with:
+          cache: pnpm
+          cache-dependency-path: ./pnpm-lock.yaml
+          node-version-file: './package.json'
+      - run: pnpm install
+      - run: pnpm run typecheck
+      - run: pnpm run lint
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - check
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v3
+        with:
+          cache: pnpm
+          cache-dependency-path: ./pnpm-lock.yaml
+          node-version-file: './package.json'
+      - run: pnpm install
+      - run: pnpm run deploy
+        env:
+          WORKSPACE_ID: ${{ secrets.WORKSPACE_ID }}
+          TAILOR_TOKEN: ${{ secrets.TAILOR_TOKEN }}
