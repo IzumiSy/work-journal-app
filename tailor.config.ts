@@ -1,6 +1,9 @@
 import { defineAuth, defineConfig } from "@tailor-platform/tailor-sdk";
 import { user } from "./src/tailordb/user";
 
+const IDP_NAMESPACE = "main-idp";
+const IDP_CLIENT_NAME = "default-idp-client";
+
 export default defineConfig({
   workspaceId: process.env.WORKSPACE_ID!,
   name: "work-journal-app",
@@ -12,6 +15,12 @@ export default defineConfig({
   db: {
     "main-db": { files: [`./src/tailordb/**/*.ts`] },
   },
+  idp: {
+    [IDP_NAMESPACE]: {
+      authorization: "loggedIn",
+      clients: [IDP_CLIENT_NAME],
+    },
+  },
   auth: defineAuth("main-auth", {
     userProfile: {
       type: user,
@@ -19,10 +28,10 @@ export default defineConfig({
       attributes: { roles: true },
     },
     idProvider: {
-      name: "main-idp",
+      name: IDP_NAMESPACE,
       kind: "BuiltInIdP",
-      namespace: "idp",
-      clientName: "builtin-idp-client",
+      namespace: IDP_NAMESPACE,
+      clientName: IDP_CLIENT_NAME,
     },
   }),
 });
