@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "turbo run lint",
     "build": "turbo run build",
-    "deploy": "turbo run deploy"
+    "deploy": "turbo run deploy",
+    "type-check": "turbo run type-check"
   },
   "packageManager": "pnpm@10.19.0",
   "engines": {

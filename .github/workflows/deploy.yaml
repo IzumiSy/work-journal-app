@@ -21,8 +21,8 @@ jobs:
           cache-dependency-path: ./pnpm-lock.yaml
           node-version-file: './package.json'
       - run: pnpm install
-      - run: pnpm run typecheck
-      - run: pnpm run lint
+      - run: pnpm typecheck
+      - run: pnpm lint
 
   deploy:
     runs-on: ubuntu-latest

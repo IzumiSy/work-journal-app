@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "deploy": "tailor-sdk apply",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "type-check": "tsc -b",
+    "deploy": "tailor-sdk apply"
   },
   "devDependencies": {
     "@eslint/js": "9.38.0",

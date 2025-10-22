@@ -1,0 +1,1 @@
+{"root":["./src/resolvers/hello.ts","./src/tailordb/category.ts","./src/tailordb/journal.ts","./src/tailordb/user.ts","./tailor.config.ts"],"version":"5.9.3"}
