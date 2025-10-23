@@ -11,8 +11,13 @@
     "deploy": "vite build && zx ./deploy.mjs"
   },
   "dependencies": {
+    "@tailor-platform/app-shell": "^0.11.1",
+    "@tailwindcss/vite": "^4.1.15",
+    "@urql/exchange-auth": "^3.0.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.15",
+    "urql": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
