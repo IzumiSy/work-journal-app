@@ -16,7 +16,7 @@ export default defineConfig({
   /**
    * Pipeline
    */
-  pipeline: {
+  resolver: {
     "main-pipeline": {
       files: [`./src/resolvers/**/*.ts`],
     },
