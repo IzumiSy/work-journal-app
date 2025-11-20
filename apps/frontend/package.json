@@ -16,7 +16,7 @@
     "@urql/exchange-auth": "^3.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "tailwindcss": "^4.1.15",
+    "tailwindcss": "^4.1.17",
     "urql": "^5.0.1"
   },
   "devDependencies": {
