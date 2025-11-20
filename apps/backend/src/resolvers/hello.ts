@@ -1,17 +1,17 @@
-import { createResolver, t } from "@tailor-platform/tailor-sdk";
+import { createResolver, t } from "@tailor-platform/sdk";
 
 export default createResolver({
   name: "hello",
   operation: "query",
-  input: t.type({
+  input: {
     name: t.string(),
-  }),
+  },
   body: (context) => {
     return {
       message: `Hello, ${context.input.name}!`,
     };
   },
-  output: t.type({
+  output: {
     message: t.string(),
-  }),
+  },
 });

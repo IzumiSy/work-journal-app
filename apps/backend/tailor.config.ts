@@ -1,8 +1,9 @@
 import {
   defineAuth,
   defineConfig,
+  defineIdp,
   defineStaticWebSite,
-} from "@tailor-platform/tailor-sdk";
+} from "@tailor-platform/sdk";
 import { user } from "./src/tailordb/user";
 
 const IDP_NAMESPACE = "main-idp";
@@ -44,12 +45,13 @@ export default defineConfig({
       clientName: IDP_CLIENT_NAME,
     },
   }),
-  idp: {
-    [IDP_NAMESPACE]: {
+
+  idp: [
+    defineIdp(IDP_NAMESPACE, {
       authorization: "loggedIn",
       clients: [IDP_CLIENT_NAME],
-    },
-  },
+    }),
+  ],
 
   /**
    * Frontend
