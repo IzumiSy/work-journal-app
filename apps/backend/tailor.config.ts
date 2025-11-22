@@ -30,6 +30,13 @@ export default defineConfig({
   },
 
   /**
+   * Executors
+   */
+  executor: {
+    files: [`./src/executor/**/*.ts`],
+  },
+
+  /**
    * Authentication
    */
   auth: defineAuth("main-auth", {
